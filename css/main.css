@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Scroll Bar Designs Unsupported in firefox*/
+::-webkit-scrollbar {
+  width: 22px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #de6262; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #de6262, #ffb88c); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #de6262, #ffb88c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+  background: -webkit-linear-gradient(to right, #525252, #3d72b4);
+  background: linear-gradient(to right, #525252, #3d72b4);
+}
+/*End Scroll Bar Designs*/
+
+.hidden {
+  opacity: 0;
+}
+
+.fade-in-element {
+  animation: fadein 0.8s;
+}
+@keyframes fadein {
+  from {opacity: 0; transform: scale(.7,.7)}
+  to {opacity: 1;}
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {opacity: 0; transform: scale(.7,.7)}
+  to {opacity: 1;}
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {opacity: 0; transform: scale(.7,.7)}
+  to {opacity: 1;}
+}
+@-o-keyframes fadein { /* Opera */
+  from {opacity: 0; transform: scale(.7,.7)}
+  to {opacity: 1;}
+}
+
+@media only screen and (max-width:767px) {
+.nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+  background: black;
+  position: fixed;
+  z-index: 2;
+}
+.nav .logo img{
+  max-height: 2.8rem;
+  margin-left: 5px;
+}
+.nav .logo h4{
+  display: inline;
+}
+nav{
+  display: none;
+  width: 100vw;
+}
+.nav i{
+  position: absolute;
+  right: 3rem;
+  top: 0.8rem;
+}
+.hero{
+  height: 100vh;
+  width: 100%;
+  background: black;
+}
+.info{
+  height: 100vh;
+  position: relative;
+}
+.container{
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  top: 20%;
+}
+header ul li a{
+  position: relative;
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  color: #ecf0f1;
+}
+
+header ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ecf0f1;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+header ul li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.nav nav{
+  font-size: 1rem;
+}
+.nav nav ul{
+  display: block;
+  width: 100%;
+}
+.nav nav ul li{
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  text-align: center;
+}
+}
+
+@media only screen and (min-width:767px) {
+  .fa-bars{
+    visibility:  hidden;
+  }
+  .nav{
+    width: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0.7;
+    z-index: 2;
+  }
+  .nav-bar{
+    display: flex;
+  }
+  h4{
+    font-size: 2.4rem;
+    display: inline-block;
+    padding-top: 9px;
+  }
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ecf0f1;
+    font-family: "Montserrat",sans-serif;
+    padding: 13px;
+    opacity: 0.8;
+    width: 100%;
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header .logo img{
+  max-height: 2.8rem;
+  cursor: pointer;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  }
+  header ul li {
+    float: left;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    font-size: 0.8rem;
+    list-style: none;
+  }
+  header ul li a{
+    position: relative;
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+
+  header ul li a:hover {
+    color: #ecf0f1;
+  }
+
+  header ul li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ecf0f1;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  header ul li a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  .hero{
+    background: black;
+    height: 100vh;
+  }
+  .info{
+    height: 100vh;
+    position: relative;
+  }
+
+  .container{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 20%;
+  }
+}
+
+
+@media only screen and (min-width:1050px) {
+.nav{
+  width: 100%;
+  position: fixed;
+  background: black;
+  opacity: 0.7;
+  z-index: 2;
+}
+.hide {
+  transform: translateY(-100%);
+}
+  h4{
+    display: inline-block;
+    padding-top: 9px;
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #ecf0f1;
+    font-family: "Montserrat",sans-serif;
+    padding: 13px;
+    opacity: 0.8;
+    width: 100%;
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header .logo img{
+  max-height: 7vh;
+  margin-left: 5px;
+  cursor: pointer;
+  margin: 0;
+  }
+  header ul{
+    list-style-type: none;
+  }
+  header ul li {
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 3rem;
+    font-size: 1rem;
+  }
+  header ul li a{
+    position: relative;
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+
+  header ul li a:hover {
+    color: #ecf0f1;
+  }
+
+  header ul li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ecf0f1;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  header ul li a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  .hero{
+    background: black;
+    height: 100vh;
+  }
+  .info{
+    height: 100vh;
+  }
+}

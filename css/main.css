@@ -32,7 +32,7 @@
 }
 
 .fade-in-element {
-  animation: fadein 0.8s;
+  animation: fadein 1.8s;
 }
 @keyframes fadein {
   from {opacity: 0; transform: scale(.7,.7)}

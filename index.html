@@ -26,11 +26,11 @@
         <i class="fas fa-bars menu" aria-hidden="true"></i>
         <nav class="nav-bar">
           <ul>
-            <li><a href="#hero">Some Thing</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Events">Events</a></li>
-            <li><a href="#Members">Members</a></li>
-            <li><a href="#Contact-Us">Contact Us</a></li>
+            <li data-id="hero"><a>Some Thing</a></li>
+            <li data-id="About"><a>About</a></li>
+            <li data-id="Events"><a>Events</a></li>
+            <li data-id="Members"><a>Members</a></li>
+            <li data-id="Contact-Us"><a>Contact Us</a></li>
           </ul>
         </nav>
       </header>
@@ -70,6 +70,11 @@
       document.querySelector(".nav-bar").style.display="none";
       else
       document.querySelector(".nav-bar").style.display="block";
+    });
+    Array.from(document.querySelectorAll('li')).forEach(li=>{
+      li.addEventListener('click',()=>{
+        document.getElementById(li.dataset.id).scrollIntoView();
+      })
     });
     </script>
   </body>

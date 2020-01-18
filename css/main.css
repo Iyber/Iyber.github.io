@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+a{
+  cursor: pointer;
+}
+
 /* Scroll Bar Designs Unsupported in firefox*/
 ::-webkit-scrollbar {
   width: 22px;

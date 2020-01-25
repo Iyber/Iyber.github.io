@@ -50,4 +50,23 @@ init: init
 };
 };
 
+document.body.addEventListener('load',animateHTML().init());
 
+if($(window).width() < 768){
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', event => {
+      document.querySelector(".nav-bar").style.display="none";
+    })
+  })
+}
+document.querySelector(".menu").addEventListener('click',function(){
+  if(document.querySelector(".nav-bar").style.display=="block")
+    document.querySelector(".nav-bar").style.display="none";
+  else
+    document.querySelector(".nav-bar").style.display="block";
+});
+Array.from(document.querySelectorAll('li')).forEach(li=>{
+  li.addEventListener('click',()=>{
+    document.getElementById(li.dataset.id).scrollIntoView();
+  })
+});

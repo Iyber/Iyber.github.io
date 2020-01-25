@@ -14,9 +14,18 @@
   <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://kit.fontawesome.com/080374cbc4.js" crossorigin="anonymous"></script>
-  <script src="App.js"></script>
   </head>
-  <body onload="animateHTML().init();">
+  <body>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <p>This site is under Construction!</p>
+        <img src="Stop.jpg" alt="stop!">
+      </div>
+
+    </div>
+
     <div class="nav">
       <header>
         <section class="logo">
@@ -39,11 +48,11 @@
     </div>
     <div class="info hidden" id="About">
       <div class="container">
-        <p>Lorem ipsum dolor sit amet, ]consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolorem ea eligendi ex exercitationem fuga in ipsam iure nam nulla odit placeat quas quasi ratione, reiciendis rem reprehenderit vel veniam?</p>
       </div>
-    </div>
+      </div>
     <div class="info hidden" id="Events">
-      <div class="container"><br><br><br><br><br><br><br><br>
+      <div class="container">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
         </div>
@@ -57,25 +66,6 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </div>
-    <script>
-    if($(window).width() < 768){
-    document.querySelectorAll('a').forEach(item => {
-      item.addEventListener('click', event => {
-        document.querySelector(".nav-bar").style.display="none";
-      })
-    })
-}
-    document.querySelector(".menu").addEventListener('click',function(){
-      if(document.querySelector(".nav-bar").style.display=="block")
-      document.querySelector(".nav-bar").style.display="none";
-      else
-      document.querySelector(".nav-bar").style.display="block";
-    });
-    Array.from(document.querySelectorAll('li')).forEach(li=>{
-      li.addEventListener('click',()=>{
-        document.getElementById(li.dataset.id).scrollIntoView();
-      })
-    });
-    </script>
+    <script src="App.js"></script>
   </body>
 </html>
